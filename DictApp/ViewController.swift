@@ -7,13 +7,43 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+// consult to tableview 1
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    @IBOutlet weak var dictTableView: UITableView!
+    // Prepare the array
+    var dictData: [String] = [
+        "aaa",
+        "bbb",
+        "ccc",
+        "ddd",
+        "eee"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // consult to tableView 2
+        self.dictTableView.delegate = self
+        self.dictTableView.dataSource = self
     }
-
-
+    // consult to tableView
+    // number of section?
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    // number of cell?
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    // content of each cell?
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // take cell like "cell"
+        let cell = self.dictTableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath)
+        cell.textLabel?.text = self.dictData[indexPath.row]
+        return cell
+    }
 }
 
