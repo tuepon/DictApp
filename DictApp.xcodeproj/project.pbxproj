@@ -15,6 +15,7 @@
 		DE9599A1262AB89900124A47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE95999F262AB89900124A47 /* LaunchScreen.storyboard */; };
 		DE9599AC262AB89900124A47 /* DictAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9599AB262AB89900124A47 /* DictAppTests.swift */; };
 		DE9599B7262AB89900124A47 /* DictAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9599B6262AB89900124A47 /* DictAppUITests.swift */; };
+		DE9599C8262BBE1B00124A47 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9599C7262BBE1B00124A47 /* webViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DE9599B2262AB89900124A47 /* DictAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DictAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9599B6262AB89900124A47 /* DictAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictAppUITests.swift; sourceTree = "<group>"; };
 		DE9599B8262AB89900124A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9599C7262BBE1B00124A47 /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				DE95999D262AB89900124A47 /* Assets.xcassets */,
 				DE95999F262AB89900124A47 /* LaunchScreen.storyboard */,
 				DE9599A2262AB89900124A47 /* Info.plist */,
+				DE9599C7262BBE1B00124A47 /* webViewController.swift */,
 			);
 			path = DictApp;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				DE959999262AB89800124A47 /* ViewController.swift in Sources */,
 				DE959995262AB89800124A47 /* AppDelegate.swift in Sources */,
 				DE959997262AB89800124A47 /* SceneDelegate.swift in Sources */,
+				DE9599C8262BBE1B00124A47 /* webViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

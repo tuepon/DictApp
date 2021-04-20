@@ -12,11 +12,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var dictTableView: UITableView!
     // Prepare the array
     var dictData: [String] = [
-        "aaa",
-        "bbb",
-        "ccc",
-        "ddd",
-        "eee"
+        "luật sư",
+        "nhân viên",
+        "kỹ sư",
+        "bác sĩ",
+        "y tá"
     ]
     
     override func viewDidLoad() {
@@ -37,13 +37,27 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return 5
     }
     
-    // content of each cell?
+    // How to do content of each cell?
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // take cell like "cell"
         let cell = self.dictTableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath)
         cell.textLabel?.text = self.dictData[indexPath.row]
         return cell
+    }
+    
+    // How to do when choose the cell in each rows?
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Move to next page
+        // Call "WebPage"
+        // Guarantee its identity
+        let next = self.storyboard?.instantiateViewController(withIdentifier: "WebPage") as! webViewController
+        // Pass the data
+        next.data = self.dictData[indexPath.row]
+        // Show
+        show(next, sender: nil)
+        
+        
     }
 }
 
